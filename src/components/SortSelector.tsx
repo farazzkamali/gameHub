@@ -19,7 +19,7 @@ const SortSelector = () => {
     return (
         <Menu>
             <MenuButton as={Button} rightIcon={<BsChevronDown/>}>Order by: {currentSortOrder?.label || 'Relevance'}</MenuButton>
-            <MenuList>
+            <MenuList bgColor='gray.900'>
                 {sortOrders.map(order=><MenuItem onClick={()=>setSortOrder(order.value)} key={order.value} value={order.value}>{order.label}</MenuItem>)}
             </MenuList>
         </Menu>

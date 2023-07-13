@@ -14,7 +14,7 @@ const PlatformSelector = () => {
     return (
         <Menu>
             <MenuButton as={Button} rightIcon={<BsChevronDown/>}>{selectedPlatform?.name || 'Platforms'}</MenuButton>
-            <MenuList>
+            <MenuList bgColor="gray.900">
                 {data?.results.map(platform => <MenuItem onClick={()=>setSelectedPlatformId(platform.id)} key={platform.id}>{platform.name}</MenuItem>)}
             </MenuList>
         </Menu>
